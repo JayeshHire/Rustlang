@@ -1,0 +1,75 @@
+control flow :--
+
+# conditional statement
+ eg :-
+
+fn main(){
+ let a = 2;
+let b = 4;
+let max = if a>b {'a'} else {'b'} ;
+println!("Maximum of a and b is {max}");
+if a>b {
+println!(" a is greater than b");
+} else {
+println!(" b is greater than a");
+}
+}
+
+Output :--
+Maximum of a and b is b
+b is greater than a
+
+
+#Repitition using loops
+
+--> Rust has 3 kinds of loops : loop , for , while
+
+eg: -- 
+//loop example
+fn main(){
+loop{
+println!("How are U");
+}
+}
+//loop will continue to print the statement until process is interupted
+
+//Returning values from loops
+fn main(){
+let no = 5 ;
+let i = 1;
+let result = 1;
+let fact = loop {
+	if result > 5 {
+		break	i ;
+	}
+	i *= result ;
+	result++;
+} ;
+println!(" factorial of {} is {}",no , i);
+}
+
+// We can use loop labels to distinguish between loops 
+
+'counter_loop : loop {
+	.
+	.
+	.
+	.
+	loop {
+		.
+		.
+		.
+		if condition {
+			break 'counter_loop;
+			}
+		}
+}
+
+
+// for , while work the same way as they work in other languages
+
+// .rev() method which reverses the range
+
+
+	
+
