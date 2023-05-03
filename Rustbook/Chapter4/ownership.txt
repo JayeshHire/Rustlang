@@ -3,3 +3,23 @@ ownership rules in Rust :--
 1. Each value in Rust has an owner.
 2. There can only be one owner at a time.
 3. When the owner goes out of scope, the value will be dropped.
+
+
+References and borrowing in rust:-
+1. we can borrow a value instead of taking its ownership with the help of
+references
+
+for eg :-
+	fn greet_str(x1 : &String){
+		println!("hii {x1} ");
+	}
+here we are using a reference to a string
+
+2. while we are borrowing a value we cannot make changes to the borrowed value
+3. to change teh value of the reference we simply use mutable type of
+reference
+	fn greet_str(x1 : &mut String){
+		println!("hii {x1}");
+	}
+4. #RESTRICTION :-- while we are creating a mutable reference to a value we can have no more references to that value
+5. 
